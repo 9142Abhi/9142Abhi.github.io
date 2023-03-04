@@ -45,32 +45,32 @@ export const Contact = () => {
             <div className="contact-content">
                 <div className="column left">
                     <div className="text">Get in Touch</div>
-                    <p>Got a project? Reach out and let's work together on something exciting. Big or small. Mobile or web.</p>
+                    <p>Got a project? Reach out and let's work together. Obviously We will do something different.</p>
                     <div className="icons">
                         <div className="row">
-                            <a href=" mailto:741kartikjain@gmail.com">   <FaEnvelope className='i' /> </a>
+                            <a href=" mailto:abhisingh24082002@gmail.com">   <FaEnvelope className='i' /> </a>
                             <div className="info">
                                 <div className="head"></div>
-                                <div className="sub-title">  <a id="contact-email" href="mailto:741kartikjain@gmail.com"> 741kartikjain@gmail.com </a> </div>
+                                <div className="sub-title">  <a id="contact-email" href="mailto:abhisingh2408200@gmail.com"> abhisingh24082002@gmail.com </a> </div>
                             </div>
                         </div>
                         <div className="row">
-                             <a href="https://in.linkedin.com/in/kartikmickey" target="_blank"> <FaLinkedin className="i"/> </a>
+                             <a href="https://www.linkedin.com/in/abhishek-kumar-467120237/" target="_blank"> <FaLinkedin className="i"/> </a>
                             <div className="info">
-                                <div className="sub-title">  <a id="contact-linkedin" href="https://www.linkedin.com/in/kartikmickey" target="_blank">Linkedin</a> </div>
+                                <div className="sub-title">  <a id="contact-linkedin" href="https://www.linkedin.com/in/abhishek-kumar-467120237/" target="_blank">Linkedin</a> </div>
                             </div>
                         </div>
                         <div className="row">
-                             <a href="https://github.com/kartikmickey" target="_blank"> <FaGithub className="i" /> </a>
+                             <a href="https://github.com/9142Abhi" target="_blank"> <FaGithub className="i" /> </a>
                             <div className="info">
-                                <div className="sub-title"> <a id="contact-github" href="https://github.com/kartikmickey" target="_blank" >GitHub</a> </div>
+                                <div className="sub-title"> <a id="contact-github" href="https://github.com/9142Abhi" target="_blank" >GitHub</a> </div>
                             </div>
                         </div>
 
                         <div className="row">
                         <FaPhoneAlt className='i' />
                            <div className="info">
-                               <div className="sub-title" id="contact-phone" > +91 7415418598</div>
+                               <div className="sub-title" id="contact-phone" > +91 9142520775</div>
                            </div>
                        </div>
 

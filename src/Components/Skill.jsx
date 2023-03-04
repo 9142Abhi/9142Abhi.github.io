@@ -1,7 +1,7 @@
 import React from 'react';
 import './Skill.css';
-import html from "../images/html.svg";
-import javaScript from "../images/javaScript.webp";
+import html from '../images/html.png'
+import js from '../images/js.png'
 import react from "../images/react.png";
 import node from "../images/node.png";
 import mango from "../images/mango.png";
@@ -27,7 +27,7 @@ const Skill = () => {
                 </div>
 
                 <div className="skills-images skills-card reduce">
-                    <img className="skills-card-img" src={javaScript} alt="JavaScript"/>
+                    <img className="skills-card-img" src={js} alt="JavaScript"/>
 
                     <p className="skills-card-name">Js</p>
                 </div>

@@ -8,7 +8,7 @@ import { HashLink as Link } from "react-router-hash-link"
 const Navbar = ()=> {
   const handleClick = ()=>{
     
-    saveAs(Resume, "Kartik_Jain_Resume");
+    saveAs(Resume, "Abhishek_Kumar_Resume");
    }
     const [name, setName] = useState(false)
     const [hover , setHover] = useState(false)
@@ -49,7 +49,7 @@ const Navbar = ()=> {
     
    <a href="/"> <p style={{ color : name ? "black" : ""
 
-}} id="navName" >Kartik Jain </p></a>
+}} id="navName" >Abhishek Kumar </p></a>
     <p id="navComp"  style={{ color : name ? "black" : ""
 }} 
 >
@@ -59,7 +59,7 @@ const Navbar = ()=> {
     <Link className="nav-link skills" to="#skills" smooth>Skills</Link>
     <Link className="nav-link projects" to="#projects" smooth>Projects</Link>
     <Link className="nav-link contact" to="#contact" smooth>Contact</Link>
-    <a className="nav-link resume" id="resume-link-1" onClick={handleClick} href="https://drive.google.com/file/d/19vD9-jQMpAhc3_5ZnVkNKzAw70IvYk71/view?usp=share_link"  target="_blank" download >Resume</a>
+    <a className="nav-link resume" id="resume-link-1" onClick={handleClick} href="https://drive.google.com/file/d/1J0OEHJCN7Ppaglh4UnclZuyaYBwkG6x6/view?usp=share_link"  target="_blank" download >Resume</a>
     </p>
     <p id="mobile" onClick={openNav} style={{fontSize:"30px",color:"white", cursor: "pointer",float: "right", textAlign: "center" }} ><GoThreeBars/></p>
 
