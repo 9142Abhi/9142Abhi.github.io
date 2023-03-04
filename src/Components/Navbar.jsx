@@ -1,24 +1,82 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-const Navbar = () => {
-  return (
-    <div id='nav-menu' style={{width:"98%", justifyContent:"flex-end", display:"flex", margin:"auto", marginTop:"2px", gap:"20px", backgroundColor:"gray", padding:"8px 5px", borderRadius:"10px" }}>
-    <Link to="/"> <button style={{border:"none", padding:"1% 2%", width:"100px", height:"40px", borderRadius:"10px", backgroundColor:"orange", color:"white", cursor:"pointer"}} className='nav-link home'>Home</button></Link>
-    <Link to="/about"> <button style={{border:"none", padding:"1% 2%",width:"100px", height:"40px", borderRadius:"10px", backgroundColor:"orange", color:"white", cursor:"pointer"}} className='nav-link about' >About</button></Link>
-   <Link to="/skills"> <button style={{border:"none", padding:"1% 2%", height:"40px", width:"100px", borderRadius:"10px", backgroundColor:"orange", color:"white", cursor:"pointer"}} className='nav-link skills'>Skills</button></Link>
-    <Link to="/project"><button style={{border:"none", padding:"1% 2%" , height:"40px", width:"100px", borderRadius:"10px", backgroundColor:"orange", color:"white", cursor:"pointer"}} className='nav-link projects'>Projects</button></Link>
-    <Link to="/contact"><button style={{border:"none", padding:"1% 2%", height:"40px", width:"100px", borderRadius:"10px", backgroundColor:"orange", color:"white", cursor:"pointer"}} className='nav-link contact'>Contact</button></Link>
-    <Link to="/resume"><button style={{border:"none", padding:"1% 2%", height:"40px", width:"100px", borderRadius:"10px", backgroundColor:"orange", color:"white", cursor:"pointer"}} className='nav-link resume'>Resume</button></Link>
+import { useEffect, useState } from "react";
+import { GoThreeBars } from "react-icons/go";
+import './Navbar.css';
+import Resume from "../images/Resume.pdf"
+import { saveAs } from "file-saver";
+import { HashLink as Link } from "react-router-hash-link"
+ 
+const Navbar = ()=> {
+  const handleClick = ()=>{
+    
+    saveAs(Resume, "Kartik_Jain_Resume");
+   }
+    const [name, setName] = useState(false)
+    const [hover , setHover] = useState(false)
+        const handleScroll = () => {
+          const scrollPosition = window.scrollY; // => scroll position
+          let com= document.getElementById("navComp")
+          if(scrollPosition > 20 ){
+            setName(true)
+            com.classList.add("mystyle")
+          }
+          else{
+            setName(false)
+            com.classList.remove("mystyle")
+          }
+      };
+      useEffect(() => {
+        handleScroll();
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+          window.removeEventListener("scroll", handleScroll);
+        };
+        }, []);
+        // console.log(hover)
+    function openNav() {
+        document.getElementById("myNav").style.height = "100%";
+      }
       
-    </div>
-  )
+      function closeNav() {
+        document.getElementById("myNav").style.height = "0%";
+      }
+
+    return  <div style={{
+        padding : name ? "15px 40px" : "" ,
+        backgroundColor : name ? "#92bcb5" : "transparent",
+        color : name ? "black" : ""
+
+    }}  id="nav-menu">
+    
+   <a href="/"> <p style={{ color : name ? "black" : ""
+
+}} id="navName" >Kartik Jain </p></a>
+    <p id="navComp"  style={{ color : name ? "black" : ""
+}} 
+>
+    <Link className="nav-link home" to="#home" smooth >Home</Link>
+    {/* <Link to="#about" smooth >About</Link> */}
+    <Link className="nav-link about" to="#about" smooth>About</Link>
+    <Link className="nav-link skills" to="#skills" smooth>Skills</Link>
+    <Link className="nav-link projects" to="#projects" smooth>Projects</Link>
+    <Link className="nav-link contact" to="#contact" smooth>Contact</Link>
+    <a className="nav-link resume" id="resume-link-1" onClick={handleClick} href="https://drive.google.com/file/d/19vD9-jQMpAhc3_5ZnVkNKzAw70IvYk71/view?usp=share_link"  target="_blank" download >Resume</a>
+    </p>
+    <p id="mobile" onClick={openNav} style={{fontSize:"30px",color:"white", cursor: "pointer",float: "right", textAlign: "center" }} ><GoThreeBars/></p>
+
+   <div id="myNav" className="overlay">
+  <a className="closebtn" onClick={closeNav}>&times;</a>
+  <div className="overlay-content">
+    <Link to="#home" smooth  onClick={closeNav} >HOME</Link>
+    <Link to="#about" smooth  onClick={closeNav} >ABOUT</Link>
+    <Link to="#skills" smooth  onClick={closeNav} >SKILLS</Link>
+    <Link to="#projects" smooth  onClick={closeNav} >PROJECTS</Link>
+    <Link to="#contact" smooth  onClick={closeNav} >CONTACT</Link>
+    <a onClick={handleClick} href="https://drive.google.com/file/d/19vD9-jQMpAhc3_5ZnVkNKzAw70IvYk71/view?usp=share_link" target="_blank" download >RESUME</a>
+  </div>
+</div>
+  </div>
+  
+  
 }
 
-export default Navbar
-
-// Navbar : id="nav-menu"
-// Home section : id="home"
-// About section : id="about" class="about section"
-// Skills section : id="skills"
-// Projects section : id="projects"
-// Contact section : id="contact"
+export default Navbar;

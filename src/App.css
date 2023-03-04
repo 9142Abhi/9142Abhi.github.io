@@ -1,38 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto+Slab:wght@200&family=Work+Sans:wght@300&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+body,
+button,
+input,
+textarea{
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
 .App {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.877);
+  color:white;
+}
+body{
+  background-color: var(--body-color);
+  color:var(--text-color);
+}
+h1,h2,h3{
+  color:var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+a{
+  text-decoration: none;
+}
+button{
+  cursor: pointer;
+  border:none;
+  outline: none;
+}
+ul{
+  list-style: none;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+.section{
+  padding:6rem 0 2rem;
+}
+.section_title{
+  font-size:var(--h1-font-size);
+  color:var(--title-color);
+  text-align: center;  
+}
+.section_subtitle{
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: 4rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Layout */
+.container{
+  max-width:968px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grid{
+  display: grid;
+  gap:1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button{
+  display: inline-block;
+  background-color: var(--title-color);
+  color: var(--container-color);
+  padding: 1.25rem 2rem;
+  border-radius: 1rem;
+  font-weight: var(--font-medium);
+}
+.button:hover{
+  background-color: var(--title-color-dark);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
+@media screen and (max-width:992px) {
+  
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width:768px) {
+  
+}
+@media screen and (max-width:576px) {
+  
 }
