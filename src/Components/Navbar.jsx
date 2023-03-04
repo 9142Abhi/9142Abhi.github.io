@@ -31,7 +31,7 @@ const Navbar = ()=> {
           window.removeEventListener("scroll", handleScroll);
         };
         }, []);
-        // console.log(hover)
+        
     function openNav() {
         document.getElementById("myNav").style.height = "100%";
       }
@@ -42,19 +42,19 @@ const Navbar = ()=> {
 
     return  <div style={{
         padding : name ? "15px 40px" : "" ,
-        backgroundColor : name ? "#92bcb5" : "transparent",
+        backgroundColor : name ? "teal" : "transparent",
         color : name ? "black" : ""
 
     }}  id="nav-menu">
     
-   <a href="/"> <p style={{ color : name ? "black" : ""
+   <a href="/"> <p style={{ color : name ? "white" : ""
 
 }} id="navName" >Abhishek Kumar </p></a>
-    <p id="navComp"  style={{ color : name ? "black" : ""
+    <p id="navComp"  style={{ color : name ? "white" : ""
 }} 
 >
     <Link className="nav-link home" to="#home" smooth >Home</Link>
-    {/* <Link to="#about" smooth >About</Link> */}
+    
     <Link className="nav-link about" to="#about" smooth>About</Link>
     <Link className="nav-link skills" to="#skills" smooth>Skills</Link>
     <Link className="nav-link projects" to="#projects" smooth>Projects</Link>

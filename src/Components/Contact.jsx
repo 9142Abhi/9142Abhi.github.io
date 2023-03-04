@@ -14,7 +14,7 @@ export const Contact = () => {
         subject: "",
         message: ""
     })
-    // console.log(data)
+    
     const form = useRef();
 
   const sendEmail = (e) => {

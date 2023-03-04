@@ -1,5 +1,5 @@
 import React, { memo, useEffect } from "react";
-import './About.css';
+import "./About.css";
 import mickey from "../images/Abhi.png";
 import Typed from "typed.js";
 
@@ -26,11 +26,12 @@ const About = () => {
               <span className="typing-2"></span>
             </div>
             <p id="user-detail-intro">
-              A Passionate Web developer who works with both the front and back
-              ends of a website or application. Provide an end-to-end service,
-              and can be involved in projects that involve databases and
-              building user-facing websites. Problem-solving mindset with a goal
-              to optimize application for better stability and speed.
+              Passionate Full stack Web Developer adept in web
+              development. Capable of writing code for production using HTML,
+              CSS, JavaScript, React, Redux on the frontend, NodeJS and
+              ExpressJS on the backend. Working with discipline and
+              goal-oriented Projects with teams. Strongly interested in get a
+              job of web developer.
             </p>
           </div>
         </div>
