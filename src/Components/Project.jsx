@@ -108,6 +108,7 @@ const Project = () => {
               <br />
               <p className="techStack project-tech-stack">
                 TechStack : JavaScrpit, HTML, CSS
+                
               </p>
               <div className="repo-links">
                 <div className="repo-div">

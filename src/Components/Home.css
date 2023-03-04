@@ -1,5 +1,5 @@
 #home {
-    background-image: url("../images/bg.jpg") ;
+    background-image: url("../images/bg.png") ;
     height: 100vh;
     min-height: 500px;
     width: 100%;
@@ -29,7 +29,7 @@
 .text-3{
     font-family: "Ubuntu", sans-serif;
     text-align: center;
-    background-color:#92BCB5;
+    background-color:#25b099;
     font-size: 25px;
     margin:20px 0px 0px;
 padding:12px 36px;
