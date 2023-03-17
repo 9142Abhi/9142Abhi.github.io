@@ -14,7 +14,7 @@ const Project = () => {
               <img src={bigbasket} alt="" />
               <div className="text project-title">Big Basket</div>
               <p className="project-description">
-                igBasket is a large online grocer headquartered in Bangalore,
+                BigBasket is a large online grocer headquartered in Bangalore,
                 India, and currently owned by Tata Group. Its registered company
                 name is Supermarket Grocery Supplies Pvt.
               </p>
